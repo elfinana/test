@@ -30,9 +30,9 @@ export default function Home() {
               <br /> 쉽고 빠르게 나만의 여행코스를 결정하세요!
             </p>
             <Flex align="center" justify="center" gap={8} className="w-full">
-              <div className="h-[1px] w-[36%] bg-border-primary"></div>
+              <div className="bg-borderPrimary h-[1px] w-[36%]"></div>
               <p className="text-12 font-normal text-[#f3f3f3]">SNS 로그인</p>
-              <div className="h-[1px] w-[36%] bg-border-primary"></div>
+              <div className="bg-borderPrimary h-[1px] w-[36%]"></div>
             </Flex>
             <Flex align="center" justify="center" gap={16}>
               <IconButton icon={<AppleIcon />} onClick={handleClickLogin} />
