@@ -1,0 +1,26 @@
+/* 공통 */
+.swiper-pagination-bullet {
+  width: 9px !important;
+  height: 9px !important;
+  background: #e5e7f1 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination {
+  width: auto !important;
+  display: inline-block !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #27282c !important;
+}
+
+.carousel-swiper .swiper {
+  overflow: visible;
+}
+.carousel-swiper .swiper-horizontal > .swiper-pagination-bullets,
+.carousel-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -40px;
+}

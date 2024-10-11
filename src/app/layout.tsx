@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import '../shared/styles/swiper-custom.css';
 import RootLayoutProvider from '@/shared/components/provider/RootLayoutProvider';
 import GlobalLayout from '@/shared/components/layout/GlobalLayout';
 
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <RootLayoutProvider>
           <GlobalLayout>{children}</GlobalLayout>
+          <div id="portal-root"></div>
         </RootLayoutProvider>
       </body>
     </html>
