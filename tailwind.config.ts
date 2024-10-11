@@ -37,6 +37,7 @@ const config: Config = {
       })(),
       backgroundColor: {
         'black-25': 'rgba(0, 0, 0, 0.25)',
+        'black-50': 'rgba(0, 0, 0, 0.5)',
         'white-54': 'rgba(255, 255, 255, 0.54)',
       },
       boxShadow: {
@@ -60,6 +61,10 @@ const config: Config = {
         '16': '1.6',
         '18': '1.8',
         '20': '2.0',
+      },
+      zIndex: {
+        backdrop: '9998',
+        modal: '9999',
       },
     },
   },
