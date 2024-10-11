@@ -15,8 +15,8 @@ const handleClickLogin = () => {
 
 export default function Home() {
   return (
-    <div className="h-full w-full bg-[url('/images/onBoarding/onboarding-bg.png')] bg-cover bg-center">
-      <div className="pt-85 h-full w-full bg-black-25 pb-32">
+    <div className="h-full w-full bg-[url('/images/onBoarding/onboarding-bg.png')] bg-cover bg-fixed bg-center">
+      <div className="h-full w-full bg-black-25 pb-32 pt-85">
         <Container className="flex h-full w-full flex-col justify-between">
           <div>
             <h1 className="mb-22 text-32 font-normal leading-12 text-[#f3f3f3]">
@@ -31,9 +31,9 @@ export default function Home() {
               <br /> 쉽고 빠르게 나만의 여행코스를 결정하세요!
             </p>
             <Flex align="center" justify="center" gap={8} className="w-full">
-              <div className="bg-borderPrimary h-[1px] w-[36%]"></div>
+              <div className="h-[1px] w-[36%] bg-borderPrimary"></div>
               <p className="text-12 font-normal text-[#f3f3f3]">SNS 로그인</p>
-              <div className="bg-borderPrimary h-[1px] w-[36%]"></div>
+              <div className="h-[1px] w-[36%] bg-borderPrimary"></div>
             </Flex>
             <Flex align="center" justify="center" gap={16}>
               <IconButton icon={<AppleIcon />} onClick={handleClickLogin} />
