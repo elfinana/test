@@ -9,9 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'border-primary': '#EEF2F6',
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        primary: '#0424C3',
+        textPrimary: '#121926',
+        textSecondary: '#344054',
+        borderPrimary: '#EEF2F6',
       },
       fontSize: (() => {
         const sizes: { [key: string]: string } = {};
