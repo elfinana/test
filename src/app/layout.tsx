@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import RootLayoutProvider from '@/shared/components/provider/RootLayoutProvider';
+import GlobalLayout from '@/shared/components/layout/GlobalLayout';
 
 export const metadata: Metadata = {
   title: '나와놀자',
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <RootLayoutProvider>{children}</RootLayoutProvider>
+        <RootLayoutProvider>
+          <GlobalLayout>{children}</GlobalLayout>
+        </RootLayoutProvider>
       </body>
     </html>
   );
