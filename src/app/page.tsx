@@ -5,7 +5,6 @@ import AppleIcon from '@/shared/components/icons/AppleIcon';
 import GoogleIcon from '@/shared/components/icons/GoogleIcon';
 import KakaoIcon from '@/shared/components/icons/KakaoIcon';
 import NaverIcon from '@/shared/components/icons/NaverIcon';
-import Backdrop from '@/shared/components/layout/Backdrop';
 import Container from '@/shared/components/layout/Container';
 import Flex from '@/shared/components/layout/Flex';
 

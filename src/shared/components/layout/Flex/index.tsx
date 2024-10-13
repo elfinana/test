@@ -22,6 +22,7 @@ export default function Flex({
 }: FlexProps) {
   const flexClass = clsx(
     'flex',
+    'w-full',
     direction === 'col' ? 'flex-col' : 'flex-row',
     align === 'center' && 'items-center',
     align === 'start' && 'items-start',

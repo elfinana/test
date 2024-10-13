@@ -10,9 +10,15 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#0424C3',
+        bgPrimary: '#F3F5FC',
         textPrimary: '#121926',
         textSecondary: '#344054',
+        textPlaceholder: '#9AA4B2',
         borderPrimary: '#EEF2F6',
+        borderSecondary: '#EAECF0',
+        warning: '#F79009',
+        borderError: '#FDA29B',
+        textError: '#D92D20',
       },
       fontSize: (() => {
         const sizes: { [key: string]: string } = {};
