@@ -5,15 +5,16 @@ import AppleIcon from '@/shared/components/icons/AppleIcon';
 import GoogleIcon from '@/shared/components/icons/GoogleIcon';
 import KakaoIcon from '@/shared/components/icons/KakaoIcon';
 import NaverIcon from '@/shared/components/icons/NaverIcon';
-import Backdrop from '@/shared/components/layout/Backdrop';
 import Container from '@/shared/components/layout/Container';
 import Flex from '@/shared/components/layout/Flex';
-
-const handleClickLogin = () => {
-  console.log('SNS Login');
-};
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleClickLogin = () => {
+    router.push('/join');
+  };
   return (
     <div className="h-full w-full bg-[url('/images/onBoarding/onboarding-bg.png')] bg-cover bg-fixed bg-center">
       <div className="h-full w-full bg-black-25 pb-32 pt-85">
