@@ -5,5 +5,5 @@ interface BottomFixedButtonProps {
 }
 
 export default function BottomFixedButton({ buttonComponent }: BottomFixedButtonProps) {
-  return <div className="fixed bottom-16 w-full px-16">{buttonComponent}</div>;
+  return <div className="max-w-screen fixed bottom-16 w-full px-16">{buttonComponent}</div>;
 }

@@ -5,5 +5,5 @@ interface GlobalLayoutProps {
 }
 
 export default function GlobalLayout({ children }: GlobalLayoutProps) {
-  return <div className="m-auto h-screen w-full max-w-[600px] overflow-y-auto shadow-lg">{children}</div>;
+  return <div className="max-w-screen m-auto h-screen w-full overflow-y-auto shadow-lg">{children}</div>;
 }

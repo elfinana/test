@@ -75,6 +75,9 @@ const config: Config = {
         backdrop: '9998',
         modal: '9999',
       },
+      maxWidth: {
+        screen: '600px',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
