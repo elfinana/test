@@ -19,6 +19,9 @@ const config: Config = {
         warning: '#F79009',
         borderError: '#FDA29B',
         textError: '#D92D20',
+        borderDisabled: '#EAECF0',
+        bgDisabled: '#F2F4F7',
+        textDisabled: '#CDD5DF',
       },
       fontSize: (() => {
         const sizes: { [key: string]: string } = {};

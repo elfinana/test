@@ -5,13 +5,17 @@ interface RadioButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   width?: string;
   height?: string;
   active?: boolean;
+  type?: 'submit' | 'reset' | 'button' | undefined;
+  onClick: () => void;
 }
 
-export default function RadioButton({ text, width, height, active }: RadioButtonProps) {
+export default function RadioButton({ text, width, height, type, onClick, active }: RadioButtonProps) {
   return (
     <button
+      type={type ? type : 'button'}
       style={{ width: width ? width : '100%', height: height ? height : '100%' }}
-      className={`${active ? 'bg-bgPrimary border-primary' : 'border-borderSecondary bg-white'} rounded-12 border`}
+      className={`${active ? 'border-primary bg-bgPrimary' : 'border-borderSecondary bg-white'} rounded-12 border`}
+      onClick={onClick}
     >
       {text}
     </button>

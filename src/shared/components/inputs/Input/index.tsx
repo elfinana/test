@@ -1,5 +1,6 @@
+import ErrorIcon from '@/shared/components/icons/ErrorIcon';
 import clsx from 'clsx';
-import { InputHTMLAttributes } from 'react';
+import { forwardRef, InputHTMLAttributes } from 'react';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   width?: string;
@@ -7,15 +8,30 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   error?: boolean;
 }
-export default function Input({ width, height, className, error, ...props }: InputProps) {
+
+// forwardRef를 사용하여 ref를 명시적으로 처리
+const Input = forwardRef<HTMLInputElement, InputProps>(({ width, height, className, error, ...props }, ref) => {
   return (
-    <input
-      style={{ width: width ? width : '100%', height: height ? height : '38px' }}
-      {...props}
-      className={clsx(
-        `placeholder:text-textPlaceholder rounded-8 border text-15 font-normal text-textPrimary ${error ? 'border-borderError' : 'border-borderSecondary'} focus:border-current`,
-        className
+    <div style={{ width: width ? width : '100%', height: height ? height : '38px' }} className="relative">
+      <input
+        {...props}
+        ref={ref}
+        className={clsx(
+          `h-full w-full rounded-8 border text-15 font-normal text-textPrimary placeholder:text-textPlaceholder ${
+            error ? 'border-borderError' : 'border-borderSecondary'
+          } focus:border-current`,
+          className
+        )}
+      />
+      {error && (
+        <div className="absolute right-10 top-1/2 -translate-y-1/2">
+          <ErrorIcon />
+        </div>
       )}
-    />
+    </div>
   );
-}
+});
+
+Input.displayName = 'Input';
+
+export default Input;
