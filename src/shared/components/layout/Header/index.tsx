@@ -1,3 +1,5 @@
+'use client';
+
 import GoBackButton from '@/shared/components/buttons/GoBackButton';
 import Flex from '@/shared/components/layout/Flex';
 
@@ -6,6 +8,8 @@ interface HeaderProps {
 }
 
 const isWebView = () => {
+  if (typeof window === 'undefined') return false;
+
   const userAgent = navigator.userAgent || navigator.vendor;
 
   // Android WebView와 iOS WebView 감지
