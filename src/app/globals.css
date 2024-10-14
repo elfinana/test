@@ -63,7 +63,7 @@ body {
 }
 
 .layout-center {
-  @apply left-1/2 m-auto w-full max-w-[600px] -translate-x-1/2;
+  @apply max-w-screen left-1/2 m-auto w-full -translate-x-1/2;
 }
 
 .before-content::before {
