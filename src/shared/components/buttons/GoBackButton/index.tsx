@@ -1,3 +1,5 @@
+'use client';
+
 import BackIcon from '@/shared/components/icons/BackIcon';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
