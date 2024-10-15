@@ -10,6 +10,7 @@ import Header from '@/shared/components/layout/Header';
 import Label from '@/shared/components/text/Label';
 import ValidationText from '@/shared/components/text/ValidationText';
 import { isAllNumValidation, isPhoneNumberValidation, isUnder14Validation, isValidDate } from '@/shared/utils/validate';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -21,6 +22,8 @@ export default function JoinPage() {
     isPhoneNumber: false,
   });
 
+  const router = useRouter();
+
   const { register, handleSubmit, watch, setValue } = useForm({
     mode: 'onChange',
   });
@@ -31,7 +34,10 @@ export default function JoinPage() {
     console.log(gender);
   };
 
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = (data: any) => {
+    console.log(data);
+    router.push('/join/complete');
+  };
 
   const birthdayValue = watch('birthday');
   const phoneValue = watch('phone');

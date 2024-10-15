@@ -18,7 +18,8 @@ export default function Button({ text, width, height, radius, ...props }: Button
       className="disabled:bg-bgDisabled disabled:border-borderDisabled disabled:text-textDisabled border border-primary bg-primary text-16 font-semibold text-white"
       {...props}
     >
-      회원가입
+      {/* 회원가입  */}
+      {text}
     </button>
   );
 }
